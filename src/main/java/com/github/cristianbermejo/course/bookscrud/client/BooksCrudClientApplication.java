@@ -3,6 +3,7 @@ package com.github.cristianbermejo.course.bookscrud.client;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.client.support.BasicAuthenticationInterceptor;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication(scanBasePackages = {
@@ -17,7 +18,12 @@ public class BooksCrudClientApplication {
 	
 	@Bean
 	public RestTemplate template() {
-		return new RestTemplate();
+		RestTemplate template = new RestTemplate();
+		BasicAuthenticationInterceptor authenticationInterceptor = new BasicAuthenticationInterceptor("admin", "admin");
+		
+		template.getInterceptors().add(authenticationInterceptor);
+		
+		return template;
 	}
 
 }

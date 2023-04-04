@@ -5,3 +5,4 @@ Microservice made during the `Spring Boot y Spring Cloud: arquitectura de micros
 ## What I've learned
 
 - Using RestTemplate to make HTTP calls from one service to another.
+- Using interceptors to access a secured service.
