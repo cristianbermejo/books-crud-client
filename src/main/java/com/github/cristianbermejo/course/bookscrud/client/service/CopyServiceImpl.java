@@ -12,7 +12,7 @@ import com.github.cristianbermejo.course.bookscrud.client.model.Copy;
 @Service
 public class CopyServiceImpl implements CopyService {
 	
-	private static final String URL = "http://localhost:8080";
+	private static final String URL = "http://books-service";
 	
 	@Autowired
 	RestTemplate template;

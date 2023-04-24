@@ -6,3 +6,4 @@ Microservice made during the `Spring Boot y Spring Cloud: arquitectura de micros
 
 - Using RestTemplate to make HTTP calls from one service to another.
 - Using interceptors to access a secured service.
+- Using an Eureka server to access resources on another microservice.
